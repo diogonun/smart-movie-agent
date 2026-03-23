@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: smart-movie-agent
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: API_KEY
+        sync: false
